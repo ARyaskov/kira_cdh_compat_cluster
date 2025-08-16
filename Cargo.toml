@@ -1,0 +1,21 @@
+[package]
+name = "kira_cdh_compat_cluster"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-2.0-only"
+description = "Greedy clustering engine compatible with CD-HIT-like pipelines"
+repository = "https://github.com/ARyaskov/kira_cdh_compat_cluster"
+documentation = "https://docs.rs/kira_cdh_compat_cluster"
+keywords = ["bioinformatics", "clustering", "minhash", "lsh", "cd-hit"]
+categories = ["science"]
+
+[dependencies]
+anyhow = "1"
+kira_cdh_compat_lsh = "0.1"
+rayon = { version = "1", optional = true }
+
+[features]
+parallel = ["rayon"]
+
+[dev-dependencies]
+rand = "0.8"
